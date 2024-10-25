@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorGreenButton"
+>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thêm thực đơn"
+            android:layout_gravity="center"
+            android:textSize="@dimen/size18sp"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/size10dp"
+    />
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size250dp"
+            android:orientation="horizontal"
+
+    >
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+        >
+
+            <EditText
+                android:id="@+id/edThemTenMonAn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size10dp"
+                android:background="@color/colorWhite"
+                android:hint="Tên món ăn"
+                android:minHeight="48dp"
+                android:padding="@dimen/size10dp"
+                android:textColor="@color/colorGray"
+                android:textColorHint="#757575" />
+
+            <EditText
+                android:id="@+id/edThemGiaTien"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size10dp"
+                android:background="@color/colorWhite"
+                android:hint="Giá tiền"
+                android:inputType="number"
+                android:padding="@dimen/size10dp"
+                android:textColor="@color/colorGray"
+                android:textColorHint="#757575"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+            >
+
+                <Spinner
+                    android:id="@+id/spinLoaiMonAn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/size10dp"
+
+                    android:layout_weight="1"
+                    android:padding="@dimen/size10dp"
+
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck">
+
+                </Spinner>
+
+                <ImageButton
+                    android:id="@+id/imThemLoaiThucDon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClickedThemLoaiThucDon"
+                    android:src="@android:drawable/ic_input_add"
+
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imHinhThucDon"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size150dp"
+            android:layout_weight="1"
+            android:onClick="onClickedHinhThucDon"
+            android:src="@drawable/backgroundheader1"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+    >
+
+        <Button
+                android:id="@+id/btnDongYThemMonAn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dongy"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/size10dp"
+                android:padding="@dimen/size10dp"
+                android:onClick="onClickedBtnThemMonAn"
+                android:background="@color/colorPrimary"
+        />
+
+        <Button
+                android:id="@+id/btnThoatThemMonAn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/thoat"
+                android:onClick="onClickedThoatThemThucDon"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/size10dp"
+                android:padding="@dimen/size10dp"
+                android:background="@color/backgroundToolbar"
+        />
+
+    </LinearLayout>
+
+</LinearLayout>
